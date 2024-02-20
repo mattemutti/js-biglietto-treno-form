@@ -1,5 +1,3 @@
-# Instruction
-
 # Descrizione:
 
 Scrivere un programma che chieda all’utente:
@@ -18,3 +16,19 @@ Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente
 
 Solo una volta che il milestone 1 sarà completo e funzionante allora realizzeremo un form in pagina in cui l’utente potrà inserire i dati e visualizzare il calcolo finale con il prezzo. Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
+
+
+# Istruzioni
+
+- compilare gli input di nome, km, età
+- inviare i dati tramite pulsante
+- calcolare il prezzo e applicare lo sconto se minorenne oppure over 65
+- compilare il biglietto inserendo nome cognome, tipo offerta, carrozza, codice cp, costo bilgletto
+
+
+# Tools
+
+- let cost
+- IF/else
+- Math.random
+- 
