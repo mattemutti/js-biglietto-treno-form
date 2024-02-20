@@ -32,41 +32,43 @@ btn_generate.addEventListener('click', function(){ //click del bottone Genera
 
 		const priceDiscountMinor = tiketPrice * discountMinor;
 		const priceTiketMinor = tiketPrice - priceDiscountMinor;
-		console.log(priceTiketMinor);
+		//console.log(priceTiketMinor);
 
-	document.getElementById("offert").innerHTML = "Sconto Minorenne 20%" // Inserisco l'offerta in html
+	document.getElementById("offert").innerHTML = "Sconto Minorenne 20%"; // Inserisco l'offerta in html
 		
+	document.getElementById("price_tiket").innerHTML = priceTiketMinor.toFixed(2) + ` \u20AC`; // Inserisco il numero randomico di codice CP
+
 
  	} else if (ageUser > 65) {
 
 		const priceDiscountSenior = tiketPrice * discountSenior;
 		const priceTiketSenior = tiketPrice - priceDiscountSenior;
-		console.log(priceTiketSenior);
+		//console.log(priceTiketSenior);
 
-	document.getElementById("offert").innerHTML = "Sconto Grandi 40%" // Inserisco l'offerta in html
+	document.getElementById("offert").innerHTML = "Sconto Grandi 40%"; // Inserisco l'offerta in html
 
+	document.getElementById("price_tiket").innerHTML = priceTiketSenior.toFixed(2) + `\u20AC`; // Inserisco il numero randomico di codice CP
 
 
 
 	} else {
-		console.log(tiketPrice);
+		//console.log(tiketPrice);
 
-		document.getElementById("offert").innerHTML = "Prezzo Standard" // Inserisco l'offerta in html
-
+		document.getElementById("offert").innerHTML = "Prezzo Standard"; // Inserisco l'offerta in html
+		
+		document.getElementById("price_tiket").innerHTML = tiketPrice.toFixed(2) + `\u20AC`; // Inserisco il numero randomico di codice CP
 
 
 	}
 
 
-	document.getElementById("name_tiket").innerHTML = nameUser // Inserisco il nome del passeggero nell'aposito campo del biglietto
-
-
-
+	document.getElementById("name_tiket").innerHTML = nameUser; // Inserisco il nome del passeggero nell'aposito campo del biglietto
+	document.getElementById("train_carriage").innerHTML = Math.round(Math.random() * 10); // Inserisco il numero randomico della carrozza
+	document.getElementById("cp_code").innerHTML = Math.round(Math.random() * 100000); // Inserisco il numero randomico di codice CP
+	
+	
 
 })
 
-
-// btn_generate.addEventListener('click', function () {
-// 	console.log('ho cliccato il bottone');
 	
 // } )
