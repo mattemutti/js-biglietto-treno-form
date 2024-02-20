@@ -47,6 +47,11 @@ const ageUser = document.getElementById("age"); // Dichiarazione della variabile
 
 const btn_generate = document.getElementById("btn_generate"); // dichiarazione del id bottone di html
 
+const priceKm = 0.21;
+// console.log(typeof priceKm);
+const discountMinor = 0.20;
+const discountSenior = 0.40;
+
 
 // quando clicchi il bottone "Genera" devi leggere i dati e fare le operazioni.
 
@@ -55,11 +60,27 @@ btn_generate.addEventListener('click', function(){ //click del bottone Genera
 	console.log(nameUser.value);
 	console.log(typeof Number(kmUser.value));
 	console.log(typeof Number(ageUser.value));
+
+	let tiketPrice = kmUser * priceKm;
+	console.log(typeof tiketPrice);
+	console.log(tiketPrice);
 	
+	if (ageUser < 18) {
+
+		const priceDiscountMinor = tiketPrice * discountMinor;
+		console.log(typeof priceDiscountMinor);
+		const priceTiketMinor = tiketPrice - priceDiscountMinor;
+		console.log(priceTiketMinor);
+
+ 	} else if (ageUser > 65) {
+
+		const priceDiscountSenior = tiketPrice * discountSenior;
+		const priceTiketSenior = tiketPrice - priceDiscountSenior;
+		console.log(priceTiketSenior);
+
+	}
 
 
-
-	
 
 
 })
