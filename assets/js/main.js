@@ -47,7 +47,18 @@ const nameUser = document.querySelector ('#name')
 console.log(nameUser.value);
 
 
-// const btn_generate = document.
+const btn_generate = document.getElementById("btn_generate"); // dichiarazione del id bottone di html
+
+
+// quando clicchi il bottone "Genera" devi leggere i dati e fare le operazioni.
+
+
+btn_generate.addEventListener('click', function(){
+
+	console.log("hai cliccato il bottone");
+
+
+})
 
 
 // btn_generate.addEventListener('click', function () {
