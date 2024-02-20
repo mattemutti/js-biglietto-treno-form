@@ -1,6 +1,4 @@
 
-// const name = document.getElementById(`name`)
-// console.log(name);
 
 // const distance = Number(); // km trasfirmati in numero
 // const age = Number(); // anni trasformati in numero
@@ -41,11 +39,11 @@
 
 
 
-// leggi il contenuto dell'input e salvalo in una variabile
+// dichiarazioni variabili degli input di html
 
-const nameUser = document.querySelector ('#name')
-console.log(nameUser.value);
-
+const nameUser = document.getElementById("name"); // Dichiarazione della variabile nome (prende l'id dell'input nome)
+const kmUser = document.getElementById("km"); // Dichiarazione della variabile kilometri (prende l'id dell'input kilometri)
+const ageUser = document.getElementById("age"); // Dichiarazione della variabile età (prende l'id dell'input degli anni)
 
 const btn_generate = document.getElementById("btn_generate"); // dichiarazione del id bottone di html
 
@@ -53,9 +51,15 @@ const btn_generate = document.getElementById("btn_generate"); // dichiarazione d
 // quando clicchi il bottone "Genera" devi leggere i dati e fare le operazioni.
 
 
-btn_generate.addEventListener('click', function(){
+btn_generate.addEventListener('click', function(){ //click del bottone Genera
+	console.log(nameUser.value);
+	console.log(typeof Number(kmUser.value));
+	console.log(typeof Number(ageUser.value));
+	
 
-	console.log("hai cliccato il bottone");
+
+
+	
 
 
 })
