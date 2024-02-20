@@ -1,47 +1,7 @@
 
-
-// const distance = Number(); // km trasfirmati in numero
-// const age = Number(); // anni trasformati in numero
-// let priceDiscount20;
-// let priceDiscount40;
-// let discountMinor;
-// let discountSenior;
-
-// // - calcolare il costo del biglietto in base ai km di percorrenza
-
-// let price = Number((distance * 0.21)); // calcolo costo biglietto in base ai km
-// console.log(typeof price, price);
-
-
-// // - controllare se il prezzo deve essere soggetto a scontistica in base all'età dell'utente
-
-
-// if (age < 18) {
-// 	priceDiscount20 = (price * 20 / 100);
-// 	discountMinor = (price - priceDiscount20);
-// 	console.log(discountMinor);
-// 	\\alert(`Il prezzo del tuo biglietto con lo sconto minorenni del 20% è: ` + discountMinor.toFixed(2) + " \u20AC"); // 2 cifre dopo la virgola e simbolo euro
-
-// } else if (age > 64) {
-// 	priceDiscount40 = (price * 40 / 100);
-// 	discountSenior = (price - priceDiscount40);
-// 	console.log(discountSenior);
-// 	\\alert(`Il prezzo del tuo biglietto con lo sconto over 65 del 40% è: ` + discountSenior.toFixed(2) + " \u20AC"); // 2 cifre dopo la virgola e simbolo euro
-
-// } else {
-// 	console.log(price);
-// 	\\alert(`Il prezzo del tuo biglietto è: ` + price.toFixed(2) + " \u20AC"); // 2 cifre dopo la virgola
-// }
-
-
-
-// *******************************************
-
-
-
 // dichiarazioni variabili degli input di html
 
-const nameUser = document.getElementById("name"); // Dichiarazione della variabile nome (prende l'id dell'input nome)
+let nameUser = document.getElementById("name"); // Dichiarazione della variabile nome (prende l'id dell'input nome)
 let kmUser = document.getElementById("km"); // Dichiarazione della variabile kilometri (prende l'id dell'input kilometri)
 let ageUser = document.getElementById("age"); // Dichiarazione della variabile età (prende l'id dell'input degli anni)
 
@@ -57,21 +17,25 @@ const discountSenior = 0.40;
 
 
 btn_generate.addEventListener('click', function(){ //click del bottone Genera
-	console.log(nameUser.value);
+	//console.log(nameUser.value);
+	nameUser = nameUser.value
 	kmUser = Number(kmUser.value);
 	ageUser = Number(ageUser.value);
 
 	let tiketPrice = kmUser * priceKm;
-	console.log(typeof kmUser);
-	console.log(typeof ageUser);
-	console.log(tiketPrice);
+	//console.log(typeof kmUser);
+	//console.log(typeof ageUser);
+	//console.log(tiketPrice);
+	//console.log(nameUser);
 	
 	if (ageUser < 18) {
 
 		const priceDiscountMinor = tiketPrice * discountMinor;
-		console.log(typeof priceDiscountMinor);
 		const priceTiketMinor = tiketPrice - priceDiscountMinor;
 		console.log(priceTiketMinor);
+
+	document.getElementById("offert").innerHTML = "Sconto Minorenne 20%" // Inserisco l'offerta in html
+		
 
  	} else if (ageUser > 65) {
 
@@ -79,7 +43,25 @@ btn_generate.addEventListener('click', function(){ //click del bottone Genera
 		const priceTiketSenior = tiketPrice - priceDiscountSenior;
 		console.log(priceTiketSenior);
 
+	document.getElementById("offert").innerHTML = "Sconto Grandi 40%" // Inserisco l'offerta in html
+
+
+
+
+	} else {
+		console.log(tiketPrice);
+
+		document.getElementById("offert").innerHTML = "Prezzo Standard" // Inserisco l'offerta in html
+
+
+
 	}
+
+
+	document.getElementById("name_tiket").innerHTML = nameUser // Inserisco il nome del passeggero nell'aposito campo del biglietto
+
+
+
 
 })
 
