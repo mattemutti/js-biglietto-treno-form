@@ -42,8 +42,8 @@
 // dichiarazioni variabili degli input di html
 
 const nameUser = document.getElementById("name"); // Dichiarazione della variabile nome (prende l'id dell'input nome)
-const kmUser = document.getElementById("km"); // Dichiarazione della variabile kilometri (prende l'id dell'input kilometri)
-const ageUser = document.getElementById("age"); // Dichiarazione della variabile età (prende l'id dell'input degli anni)
+let kmUser = document.getElementById("km"); // Dichiarazione della variabile kilometri (prende l'id dell'input kilometri)
+let ageUser = document.getElementById("age"); // Dichiarazione della variabile età (prende l'id dell'input degli anni)
 
 const btn_generate = document.getElementById("btn_generate"); // dichiarazione del id bottone di html
 
@@ -58,11 +58,12 @@ const discountSenior = 0.40;
 
 btn_generate.addEventListener('click', function(){ //click del bottone Genera
 	console.log(nameUser.value);
-	console.log(typeof Number(kmUser.value));
-	console.log(typeof Number(ageUser.value));
+	kmUser = Number(kmUser.value);
+	ageUser = Number(ageUser.value);
 
 	let tiketPrice = kmUser * priceKm;
-	console.log(typeof tiketPrice);
+	console.log(typeof kmUser);
+	console.log(typeof ageUser);
 	console.log(tiketPrice);
 	
 	if (ageUser < 18) {
@@ -79,9 +80,6 @@ btn_generate.addEventListener('click', function(){ //click del bottone Genera
 		console.log(priceTiketSenior);
 
 	}
-
-
-
 
 })
 
