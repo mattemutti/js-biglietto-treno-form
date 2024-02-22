@@ -1,9 +1,12 @@
 
 // dichiarazioni variabili degli input di html
 
-let nameUser = document.getElementById("name"); // Dichiarazione della variabile nome (prende l'id dell'input nome)
-let kmUser = document.getElementById("km"); // Dichiarazione della variabile kilometri (prende l'id dell'input kilometri)
-let ageUser = document.getElementById("age"); // Dichiarazione della variabile età (prende l'id dell'input degli anni)
+let el_nameUser = document.getElementById("name"); // Dichiarazione della variabile nome (prende l'id dell'input nome)
+let el_kmUser = document.getElementById("km"); // Dichiarazione della variabile kilometri (prende l'id dell'input kilometri)
+let el_ageUser = document.getElementById("age"); // Dichiarazione della variabile età (prende l'id dell'input degli anni)
+let nameUser;
+let kmUser;
+let ageUser;
 const btn_generate = document.getElementById("btn_generate"); // dichiarazione del id bottone di html
 const priceKm = 0.21;
 const discountMinor = 0.20;
@@ -14,9 +17,9 @@ const discountSenior = 0.40;
 
 btn_generate.addEventListener('click', function(){ //click del bottone Genera
 	
-	nameUser = nameUser.value				// legge il valore inserito dall'utente nella casella di input
-	kmUser = Number(kmUser.value);			// legge il valore inserito dall'utente nella casella di input e lo trasforma in numero
-	ageUser = Number(ageUser.value);		// legge il valore inserito dall'utente nella casella di input e lo trasforma in numero
+	nameUser = el_nameUser.value				// legge il valore inserito dall'utente nella casella di input
+	kmUser = Number(el_kmUser.value);			// legge il valore inserito dall'utente nella casella di input e lo trasforma in numero
+	ageUser = Number(el_ageUser.value);		// legge il valore inserito dall'utente nella casella di input e lo trasforma in numero
 
 	let tiketPrice = kmUser * priceKm;
 	
